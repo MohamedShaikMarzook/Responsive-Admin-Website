@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>mitsogo</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-pie.min.js"></script>
+  </head>
+  <body style="color: #f5f7fb">
+    <div class="container">
+      <div class="top">
+        <div class="hamburger">
+          <a href="#">
+            <span class="menu"></span>
+          </a>
+        </div>
+
+        <div class="box">
+          <span class="search"></span>
+          <input
+            type="search"
+            placeholder="Search transactions,Invoices or help"
+          />
+          <div class="right">
+            <span class="bell" onclick="toggleMenu()"></span>
+            <div class="sub-menu-wrap" id="subMenu">
+              <div class="sub-menu">
+                <a href="#" class="sub-menu-link">
+                  <img src="images/profile-pic-02.jpg" />
+                  <div>
+                    <p class="fst">Bavid kames</p>
+                    <p class="sec">Assigned you on the call</p>
+                  </div>
+                  <span></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                  <img src="images/profile-pic-06.jpg" />
+                  <div>
+                    <p class="fst">Alexa Marry</p>
+                    <p class="sec">Task new UI as done</p>
+                  </div>
+                  <span></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                  <img src="images/profile-pic-05.jpg" />
+                  <div>
+                    <p class="fst">Eva Maria</p>
+                    <p class="sec">Added a new comment at task</p>
+                  </div>
+                  <span></span>
+                </a>
+              </div>
+            </div>
+
+            <p class="text">John Doe</p>
+            <span class="down"></span>
+          </div>
+        </div>
+        <div class="profile">
+          <img src="images/profile-pic-01.jpg" onclick="toggleMenu2()" />
+          <div class="sub-menu-wrap2" id="subMenu2">
+            <div class="sub-menu2">
+              <a href="#" class="sub-menu-link2">
+                <span class="pro"></span>
+                <p class="tag">My Profile</p>
+              </a>
+              <a href="#" class="sub-menu-link2">
+                <span class="bill"></span>
+                <p class="tag">Billing</p>
+              </a>
+              <a href="#" class="sub-menu-link2">
+                <span class="log"></span>
+                <p class="tag">Logout</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="over">
+          <h2 class="dash-title">Overview</h2>
+          <button class="btn">
+            <p>Add Funds</p>
+            <span class="plus"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="chart1">
+        <div class="stl-chart">
+          <p>Statistics</p>
+          <div class="time">
+            <p>Last 6 months</p>
+            <span class="down1"></span>
+          </div>
+          <canvas id="myChart" width="800" height="600"></canvas>
+        </div>
+      </div>
+
+      <div class="chart2">
+        <div id="second_container">
+          <p>sales distribution</p>
+        </div>
+      </div>
+
+      <div class="sum">
+        <div class="summary-card">
+          <img class="profile-img" src="images/profile-pic-01.jpg" />
+          <p>Nick Herasimenka</p>
+          <p class="city">United States</p>
+          <div class="social">
+            <div class="twitter"></div>
+            <div class="fb"></div>
+            <div class="linkedIn"></div>
+            <div class="wp"></div>
+          </div>
+          <div class="ourusers">
+            <p>Our Users</p>
+          </div>
+          <span class="dot"></span>
+          <div class="summary-single">
+            <span><img src="images/profile-pic-02.jpg" /></span>
+            <div>
+              <h5>Drew James</h5>
+              <span class="num"
+                ><small>United States</small>
+                <p class="contact">Mobile:8715674877</p>
+              </span>
+            </div>
+          </div>
+          <div class="summary-single">
+            <span><img src="images/profile-pic-03.jpg" /></span>
+            <div>
+              <h5>Bavid Kames</h5>
+              <span class="num"
+                ><small>United States</small>
+                <p class="contact">Mobile:8715674877</p>
+              </span>
+            </div>
+          </div>
+          <div class="summary-single">
+            <span><img src="images/profile-pic-04.jpg" /></span>
+            <div>
+              <h5>Lavid Emes</h5>
+              <span class="num"
+                ><small>United States</small>
+                <p class="contact">Mobile:8715674877</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab">
+        <div class="activity-card">
+          <h3>Referrer</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Location</th>
+                <th>Views</th>
+                <th>Sales</th>
+                <th>Conversion</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>google.com</td>
+                <td>3746</td>
+                <td>752</td>
+                <td>43%</td>
+                <td>$19,291</td>
+              </tr>
+              <tr>
+                <td>facebook.com</td>
+                <td>3746</td>
+                <td>728</td>
+                <td>32%</td>
+                <td>$17,638</td>
+              </tr>
+              <tr>
+                <td>twitter.com</td>
+                <td>8836</td>
+                <td>694</td>
+                <td>28%</td>
+                <td>$16,218</td>
+              </tr>
+              <tr>
+                <td>Direct,Email,IM</td>
+                <td>1137</td>
+                <td>645</td>
+                <td>24%</td>
+                <td>$14,421</td>
+              </tr>
+              <tr>
+                <td>linkedIn.com</td>
+                <td>2739</td>
+                <td>539</td>
+                <td>20%</td>
+                <td>$12,370</td>
+              </tr>
+              <tr>
+                <td>Instagram.com</td>
+                <td>2739</td>
+                <td>539</td>
+                <td>20%</td>
+                <td>$12,370</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="button">
+            <a href="#">Show More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="video">
+        <div class="titl">
+          <p>Product Video</p>
+          <span class="dot1"></span>
+        </div>
+
+        <div class="bday-card">
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/Oy6hk6Y7VHQ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <nav>
+          <ul>
+            <div class="brand">
+              <h2>A C M E</h2>
+            </div>
+
+            <li>
+              <a href="#" class="items">
+                <span class="home"></span>
+                <p class="tg">Home</p>
+              </a>
+            </li>
+            <li class="act">
+              <a href="#" class="items">
+                <span class="dash"></span>
+                <p class="tg">Dashboard</p>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="items">
+                <span class="inbox"></span>
+                <p class="tg">Inbox</p>
+                <p class="tg1">new</p>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="items">
+                <span class="products"></span>
+                <p class="tg">Products</p>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="items">
+                <span class="admin"></span>
+                <p class="tg">Admin</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
